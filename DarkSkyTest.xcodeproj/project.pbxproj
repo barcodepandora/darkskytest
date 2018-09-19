@@ -13,6 +13,7 @@
 		60D73D972152C17300A2EA3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60D73D962152C17300A2EA3B /* Assets.xcassets */; };
 		60D73D9A2152C17300A2EA3B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60D73D982152C17300A2EA3B /* LaunchScreen.storyboard */; };
 		60D73DA22152C1B900A2EA3B /* DarkSkyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D73DA12152C1B900A2EA3B /* DarkSkyViewController.swift */; };
+		60D73DA42152CA9800A2EA3B /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D73DA32152CA9800A2EA3B /* Manager.swift */; };
 		EDC177B7AD4BC401423C05CB /* Pods_DarkSkyTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ABDE73DD5C3F35ECD120E5D /* Pods_DarkSkyTest.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +27,7 @@
 		60D73D992152C17300A2EA3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		60D73D9B2152C17300A2EA3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		60D73DA12152C1B900A2EA3B /* DarkSkyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkSkyViewController.swift; sourceTree = "<group>"; };
+		60D73DA32152CA9800A2EA3B /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Manager.swift; path = /Users/barcodepandora/Documents/workspace/iOS/test/DarkSkyTest/Manager.swift; sourceTree = "<absolute>"; };
 		8318704D79BD5BBAE329BCF8 /* Pods-DarkSkyTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DarkSkyTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-DarkSkyTest/Pods-DarkSkyTest.release.xcconfig"; sourceTree = "<group>"; };
 		8A04F0860751926E7E20E56E /* Pods-DarkSkyTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DarkSkyTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DarkSkyTest/Pods-DarkSkyTest.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -54,7 +56,13 @@
 		60D73D832152C17300A2EA3B = {
 			isa = PBXGroup;
 			children = (
+				60D73DA32152CA9800A2EA3B /* Manager.swift */,
 				60D73DA12152C1B900A2EA3B /* DarkSkyViewController.swift */,
+				60D73D932152C17300A2EA3B /* Main.storyboard */,
+				60D73D8F2152C17300A2EA3B /* AppDelegate.swift */,
+				60D73D912152C17300A2EA3B /* ViewController.swift */,
+				60D73D962152C17300A2EA3B /* Assets.xcassets */,
+				60D73D982152C17300A2EA3B /* LaunchScreen.storyboard */,
 				60D73D8E2152C17300A2EA3B /* DarkSkyTest */,
 				60D73D8D2152C17300A2EA3B /* Products */,
 				432654870B7D314295BCE07F /* Pods */,
@@ -73,11 +81,6 @@
 		60D73D8E2152C17300A2EA3B /* DarkSkyTest */ = {
 			isa = PBXGroup;
 			children = (
-				60D73D8F2152C17300A2EA3B /* AppDelegate.swift */,
-				60D73D912152C17300A2EA3B /* ViewController.swift */,
-				60D73D932152C17300A2EA3B /* Main.storyboard */,
-				60D73D962152C17300A2EA3B /* Assets.xcassets */,
-				60D73D982152C17300A2EA3B /* LaunchScreen.storyboard */,
 				60D73D9B2152C17300A2EA3B /* Info.plist */,
 			);
 			path = DarkSkyTest;
@@ -223,6 +226,7 @@
 				60D73DA22152C1B900A2EA3B /* DarkSkyViewController.swift in Sources */,
 				60D73D922152C17300A2EA3B /* ViewController.swift in Sources */,
 				60D73D902152C17300A2EA3B /* AppDelegate.swift in Sources */,
+				60D73DA42152CA9800A2EA3B /* Manager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
