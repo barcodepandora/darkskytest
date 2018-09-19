@@ -18,6 +18,7 @@ class DarkSkyViewController: UIViewController {
     @IBOutlet weak var lblAfterTomorrow: UILabel!
     @IBOutlet weak var lblDegreesAfterTomorrow: UILabel!
     
+    @IBOutlet weak var imgWeather: UIImageView!
     @IBOutlet weak var imgToday: UIImageView!
     @IBOutlet weak var imgTomorrow: UIImageView!
     @IBOutlet weak var imgAfterTomorrow: UIImageView!
@@ -53,11 +54,16 @@ class DarkSkyViewController: UIViewController {
     
     func loadWeather() {
     
+        var formatter: NumberFormatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        formatter.minimumFractionDigits = 1
+
         // Weather
         
         var currently: NSMutableDictionary = weather.object(forKey: "currently") as! NSMutableDictionary
 //        print(String(describing: currently.object(forKey: "temperature") as! NSNumber))
-        lblWeather.text = String(describing: currently.object(forKey: "temperature") as! NSNumber)
+        lblWeather.text = formatter.string(from: currently.object(forKey: "temperature") as! NSNumber)
+        imgWeather.image = UIImage(named: (currently as! NSMutableDictionary).object(forKey: "icon") as! String)
         
         // Forecast
         
@@ -71,19 +77,19 @@ class DarkSkyViewController: UIViewController {
         time1970 = (day as! NSMutableDictionary).object(forKey: "time") as! NSNumber
         var exactDate = NSDate(timeIntervalSince1970: TimeInterval(truncating: time1970))
         lblToday.text = exactDate.dayOfTheWeek()
-        lblDegreesToday.text = String(describing: currently.object(forKey: "temperature") as! NSNumber)
+        lblDegreesToday.text = formatter.string(from: currently.object(forKey: "temperature") as! NSNumber)
         imgToday.image = UIImage(named: (day as! NSMutableDictionary).object(forKey: "icon") as! String)
         day = sprint[1] as! NSMutableDictionary
         time1970 = (day as! NSMutableDictionary).object(forKey: "time") as! NSNumber
         exactDate = NSDate(timeIntervalSince1970: TimeInterval(truncating: time1970))
         lblTomorrow.text = exactDate.dayOfTheWeek()
-        lblDegreesTomorrow.text = String(describing: currently.object(forKey: "temperature") as! NSNumber)
+        lblDegreesTomorrow.text = formatter.string(from: currently.object(forKey: "temperature") as! NSNumber)
         imgTomorrow.image = UIImage(named: (day as! NSMutableDictionary).object(forKey: "icon") as! String)
         day = sprint[2] as! NSMutableDictionary
         time1970 = (day as! NSMutableDictionary).object(forKey: "time") as! NSNumber
         exactDate = NSDate(timeIntervalSince1970: TimeInterval(truncating: time1970))
         lblAfterTomorrow.text = exactDate.dayOfTheWeek()
-        lblDegreesAfterTomorrow.text = String(describing: currently.object(forKey: "temperature") as! NSNumber)
+        lblDegreesAfterTomorrow.text = formatter.string(from: currently.object(forKey: "temperature") as! NSNumber)
         imgAfterTomorrow.image = UIImage(named: (day as! NSMutableDictionary).object(forKey: "icon") as! String)
 
     }
